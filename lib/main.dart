@@ -224,7 +224,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: SafeArea(
         child: Column(
           children: [
             Row(
@@ -233,7 +233,7 @@ class SecondPage extends StatelessWidget {
                   padding: EdgeInsets.only(top: 15),
                   child: ClipOval(
                     child: Image.network(
-                      "https://www.petz.world/wp-content/uploads/2022/06/FERRET-500x393.jpg",
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_7PaqTsKWO15UYN1-ARaJuEHDSkUMfiU3vMgcSLXiUrx0P3R7Gx2mReMfIiM8QJCAEzHGI1BbXLN5lI1iIm44b673vOQi4pxBHdBukQ&s=10",
                       width: 100,
                       height: 100,
                     ),
@@ -310,7 +310,7 @@ class SecondPage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () => Navigator.pushNamed(context, '/second'),
                       child: Text(
-                        "ติมตาม",
+                        "ติดตาม",
                         style: TextStyle(fontSize: 16),
                       ),
                       style: ElevatedButton.styleFrom(
