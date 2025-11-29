@@ -198,9 +198,12 @@ class MyHomePage extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () => Navigator.pushNamed(context, '/second'),
-                      child: Text("Next to Second"),
+                      child: Text(
+                        "ไปยังหน้า 2",
+                        style: TextStyle(fontSize: 16),
+                      ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.lightGreen,
+                        backgroundColor: Colors.lightGreen[300],
                         foregroundColor: Colors.black,
                       ),
                     ),
@@ -220,6 +223,128 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("SecondPage")));
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 15),
+                  child: ClipOval(
+                    child: Image.network(
+                      "https://www.petz.world/wp-content/uploads/2022/06/FERRET-500x393.jpg",
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
+                ),
+                SizedBox(width: 15),
+                Container(
+                  child: Column(
+                    children: [
+                      Text("40"),
+                      Text("กำลังติตาม", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(width: 2, height: 60, color: Colors.grey,),
+                SizedBox(width: 10),
+                Container(
+                  child: Column(
+                    children: [
+                      Text("200"),
+                      Text("ผู้ติดตาม", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(width: 2, height: 60, color: Colors.grey,),
+                SizedBox(width: 10),
+                Container(
+                  child: Column(
+                    children: [
+                      Text("500"),
+                      Text(
+                        "ถูกใจและบันทึก",
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20,),
+            Container(
+              padding: EdgeInsets.only(left: 10),
+              width: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Noppanut_Tariruk", style: TextStyle(fontSize: 20),),
+                  Icon(Icons.verified, color: Colors.blueAccent,),
+                ],
+              ),
+            ),
+            Container(
+                padding: EdgeInsets.only(left: 10),
+                width: double.infinity,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(Icons.tiktok),
+                    Text("Noppanut",
+                      style: TextStyle(fontSize: 16, color: Colors.grey),),
+                    Icon(Icons.arrow_drop_down)
+                  ],
+                )
+            ),
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 300,
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.pushNamed(context, '/second'),
+                      child: Text(
+                        "ติมตาม",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Icon(Icons.share),
+                ],
+              ),
+            ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Image.network(
+                    "https://i.pinimg.com/564x/71/a6/7a/71a67adac001e41568813f5739e50006.jpg",
+                    width: 190, height: 200,),
+                  SizedBox(width: 10,),
+                  Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4elsIlYWujM2yWv2pefKFfPgvYCk21GuI1H5IpopkNirjwApP1H6t9GVu4gony6NCrY&usqp=CAU",
+                    width: 190, height: 200,),
+                  SizedBox(width: 10,),
+                ],
+
+              ),
+            ),
+
+
+          ],
+        ),
+      ),
+    );
   }
 }
